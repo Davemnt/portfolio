@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "tailwindcss";
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-principal: "Open Sans", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* PASO 3: ELIMINAMOS EL BLOQUE @theme. 
+  No es necesario y es lo que causa el error. 
+  Tus variables --background y --foreground ya funcionan globalmente.
+*/
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-principal); /* Usamos la variable que definiste */
+}
+
+/* Animación para el cursor parpadeante (código que te di antes) */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking-cursor {
+  animation: blink 1s infinite;
+}
+
+/* src/app/globals.css */
+
+/* ... El resto de tus estilos, incluyendo .blinking-cursor ... */
+
+
+/* --- INICIO: CÓDIGO PARA EL BRILLO DE BOTONES --- */
+
+/* --- INICIO: CÓDIGO PARA BRILLO ESTÁTICO --- */
+
+/* Esta única clase aplica un brillo naranja constante al elemento */
+.add-glow-on-hover:hover {
+  box-shadow: 0 0 20px 3px rgba(249, 115, 22, 0.7);
+}
+
+
+/* --- FIN: CÓDIGO PARA BRILLO ESTÁTICO --- */
+
+html {
+  scroll-behavior: smooth;
+}
