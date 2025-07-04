@@ -14,7 +14,7 @@ const PortfolioSection = () => {
       technologies: ["HTML", "CSS"],
       image: "/images/cv.png",
       gitUrl: "https://github.com/Davemnt/curriculum",
-      previewUrl: "https://davemnt.github.io/CV/",
+      previewUrl: "https://davemnt.github.io/curriculum/",
     },
     {
       id: 2,

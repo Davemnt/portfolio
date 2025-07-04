@@ -8,6 +8,9 @@ import Link from "next/link";
 import { FaMousePointer } from "react-icons/fa";
 import { GiSparkles } from "react-icons/gi"; // Nombre corregido
 
+ 
+const linkedinUrl = "https://www.linkedin.com/in/david-monte-a9ba567b/";
+
 const HeroSection = () => {
   return (
     <motion.section
@@ -56,14 +59,14 @@ const HeroSection = () => {
 
             {/* ===== BOTÓN VER CV (MANTIENE EL EFECTO ANTERIOR) ===== */}
             <a
-              href="/images/curriculum.pdf"
+              href={linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
               // Este botón mantiene el brillo constante que se apaga en hover
-              className="add-glow-on-hover inline-block px-1 py-1 rounded-full mt-3 bg-orange-600 text-[#1c1c1c] transition-all duration-300 ease-in-out hover:shadow-none hover:-translate-y-1 hover:scale-105"
+              className="add-glow-on-hover inline-block px-0.5 py-0.5 rounded-full mt-3 bg-orange-600 text-[#1c1c1c] transition-all duration-300 ease-in-out hover:shadow-none hover:-translate-y-1 hover:scale-105"
             >
               <span className="block bg-[#fff] rounded-full px-5 py-2 transition-all duration-300 ease-in-out hover:bg-transparent hover:text-[#e7e6c4]">
-                VER CV
+                VER PERFIL LINKEDIN
               </span>
             </a>
           </div>

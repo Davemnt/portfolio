@@ -14,7 +14,7 @@ const FooterSection = () => {
   return (
     <footer className="bg-[#1c1c1c] text-[#e7e6c4] py-8 md:py-12">
       <div className="container mx-auto px-4 max-w-6xl text-center">
-        <h3 className="text-2xl font-bold text-[#e7e6c4] mb-4">O encuéntrame en:</h3>
+        {/* <h3 className="text-2xl font-bold text-[#e7e6c4] mb-4">O encuéntrame en:</h3> */}
         {/* --- PASO 3: AÑADIR LOS ENLACES A REDES SOCIALES --- */}
         <div className="flex justify-center space-x-6 mb-6">
           <a
