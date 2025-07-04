@@ -74,15 +74,15 @@ const ContactSection = () => {
             <form ref={formRef} action={handleFormSubmit} className="bg-white p-6 sm:p-8 rounded-lg shadow-xl w-full">
               <div className="mb-5">
                 <label htmlFor="name" className="block text-slate-700 font-medium mb-2">Nombre</label>
-                <input type="text" id="name" name="name" required className="w-full px-4 py-3 border border-slate-300 rounded-md focus:ring-orange-500 focus:border-orange-500 transition"/>
+                <input type="text" id="name" name="name" required className="w-full px-4 py-3 border border-slate-300 rounded-md focus:ring-orange-500 focus:border-orange-500 transition text-black"/>
               </div>
               <div className="mb-5">
                 <label htmlFor="email" className="block text-slate-700 font-medium mb-2">Mail</label>
-                <input type="email" id="email" name="email" required className="w-full px-4 py-3 border border-slate-300 rounded-md focus:ring-orange-500 focus:border-orange-500 transition"/>
+                <input type="email" id="email" name="email" required className="w-full px-4 py-3 border border-slate-300 rounded-md focus:ring-orange-500 focus:border-orange-500 transition text-black"/>
               </div>
               <div className="mb-6">
                 <label htmlFor="message" className="block text-slate-700 font-medium mb-2">Mensaje</label>
-                <textarea id="message" name="message" rows="5" required className="w-full px-4 py-3 border border-slate-300 rounded-md focus:ring-orange-500 focus:border-orange-500 transition"></textarea>
+                <textarea id="message" name="message" rows="5" required className="w-full px-4 py-3 border border-slate-300 rounded-md focus:ring-orange-500 focus:border-orange-500 transition text-black"></textarea>
               </div>
               <div className="text-center">
                 <button type="submit" className="w-full px-8 py-3 bg-orange-600 text-white rounded-md text-lg font-semibold shadow-md hover:bg-orange-700 transition duration-300 disabled:bg-slate-400" disabled={status?.type === 'info'}>
