@@ -3,10 +3,13 @@
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from "framer-motion";
+import { useLanguage } from '../context/LanguageContext';
+import { getTranslation } from '../translations';
 
 const PortfolioSection = () => {
-  // PASO 1: Reestructuramos los datos. Añadimos un array 'technologies'.
-  const projects = [
+  const { language } = useLanguage();
+  const t = getTranslation(language);
+  const esProjects = [
     {
       id: 1,
       title: "Curriculum Vitae Interactivo",
@@ -45,6 +48,47 @@ const PortfolioSection = () => {
     },
   ];
 
+  const enProjects = [
+    {
+      id: 1,
+      title: "Interactive CV",
+      description: "As a practice, I designed my CV interactively to showcase my layout and design skills.",
+      technologies: ["HTML", "CSS"],
+      image: "/images/cv.png",
+      gitUrl: "https://github.com/Davemnt/curriculum",
+      previewUrl: "https://davemnt.github.io/curriculum/",
+    },
+    {
+      id: 2,
+      title: "Mattress E-commerce",
+      description: "Development of a complete e-commerce site, including shopping cart, user profiles, and payment gateway.",
+      technologies: ["React", "Node.js", "Express", "IN DEVELOPMENT"],
+      image: "/images/ecco1.png",
+      gitUrl: "#",
+      previewUrl: "#",
+    },
+    {
+      id: 3,
+      title: "Real Estate Landing Page",
+      description: "Design of a modern Landing Page optimized for converting visitors into potential customers for a real estate agency.",
+      technologies: ["Astro", "HTML", "CSS", "Gsap", "TailwindCSS", "IN DEVELOPMENT"],
+      image: "/images/alquiler1.png",
+      gitUrl: "#",
+      previewUrl: "#",
+    },
+    {
+      id: 4,
+      title: "Sales System",
+      description: "Sales system designed to optimize a company's stock and sales management, with user roles and reports.",
+      technologies: ["React", "PostgreSQL", "Full Stack", "IN DEVELOPMENT"],
+      image: "/images/sist-ventas.png",
+      gitUrl: "#",
+      previewUrl: "#",
+    },
+  ];
+
+  const projects = language === 'es' ? esProjects : enProjects;
+
   return (
     <motion.section
       id="portfolio"
@@ -56,7 +100,7 @@ const PortfolioSection = () => {
     >
       <div className="container mx-auto px-4 max-w-7xl">
         <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-800 text-center mb-16">
-          Mi <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">Portafolio</span>
+          {t.portfolio.title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">{t.portfolio.titleHighlight}</span>
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">

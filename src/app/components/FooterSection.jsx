@@ -1,11 +1,14 @@
 "use client";
 
 import React from 'react';
-// PASO 1: Importar los íconos que vamos a usar
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { useLanguage } from '../context/LanguageContext';
+import { getTranslation } from '../translations';
 
 const FooterSection = () => {
   const currentYear = new Date().getFullYear();
+  const { language } = useLanguage();
+  const t = getTranslation(language);
 
   // PASO 2: Definir las URLs de tus redes sociales para un código más limpio
   const githubUrl = "https://github.com/Davemnt";
@@ -39,7 +42,7 @@ const FooterSection = () => {
 
         {/* Información de Copyright (sin cambios) */}
         <p className="text-[#e7e6c4] text-sm md:text-base">
-          © {currentYear} David. Todos los derechos reservados.
+          © {currentYear} David. {t.footer.rights}
         </p>
       </div>
     </footer>

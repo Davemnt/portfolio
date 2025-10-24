@@ -2,8 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from '../context/LanguageContext';
+import { getTranslation } from '../translations';
 
-// Array para las tecnologías, facilitando su mantenimiento
 const technologies = [
   { name: "HTML", imgSrc: "/images/html.png" },
   { name: "CSS", imgSrc: "/images/css.png" },
@@ -17,7 +18,9 @@ const technologies = [
 ];
 
 const AboutMeSection = () => {
-  // Configuración de la animación para reutilizarla
+  const { language } = useLanguage();
+  const t = getTranslation(language);
+
   const fadeInAnimation = {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
@@ -58,24 +61,17 @@ const AboutMeSection = () => {
             transition={{ ...fadeInAnimation.transition, delay: 0.4 }}
           >
             <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-800 mb-6 leading-tight">
-              Un poco{" "}
+              {t.about.title}{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">
-                sobre mí
+                {t.about.titleHighlight}
               </span>
             </h2>
             <p className="text-slate-600 text-xl leading-relaxed mb-4">
-                Con 14 años de experiencia como técnico informático, he dedicado
-                mi carrera a brindar soporte y ofrecer soluciones efectivas con
-                un servicio de calidad. Impulsado por un constante deseo de
-                crecimiento, he expandido mis habilidades hacia el apasionante
-                mundo del desarrollo web.
-              </p>
-              <p className="text-slate-600 text-xl leading-relaxed mb-10">
-                Actualmente, busco unirme a una empresa dinámica donde pueda
-                aportar mis conocimientos, seguir aprendiendo y contribuir
-                activamente al éxito del equipo, con la intención de establecer
-                una relación laboral sólida y a largo plazo.
-              </p>
+              {t.about.description1}
+            </p>
+            <p className="text-slate-600 text-xl leading-relaxed mb-10">
+              {t.about.description2}
+            </p>
           </motion.div>
         </div>
 
@@ -87,7 +83,7 @@ const AboutMeSection = () => {
           transition={{ ...fadeInAnimation.transition, delay: 0.6 }}
         >
           <h3 className="text-3xl font-bold text-slate-800 mb-8 text-center">
-            Tecnologías y Herramientas
+            {t.about.techTitle}
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {technologies.map((tech) => (

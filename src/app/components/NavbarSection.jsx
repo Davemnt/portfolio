@@ -1,25 +1,27 @@
-"use client"; // Esta directiva es necesaria para usar hooks de React
+"use client";
 
-// PASO 1: Importaciones adicionales que necesitaremos
 import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link'; // Es mejor usar el Link de Next.js
+import Link from 'next/link';
+import { useLanguage } from '../context/LanguageContext';
+import { getTranslation } from '../translations';
+import { FaGlobe } from 'react-icons/fa';
 
-// PASO 2: Centralizamos los enlaces en un array para un código más limpio
-const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#sobre-mi", label: "Sobre mi" },
-  { href: "#estudios", label: "Formación" },
-  { href: "#portfolio", label: "Portfolio" },
-  { href: "#contacto", label: "Contacto" },
+// Get nav links based on language
+const getNavLinks = (t) => [
+  { href: "#home", label: t.nav.home },
+  { href: "#sobre-mi", label: t.nav.about },
+  { href: "#estudios", label: t.nav.studies },
+  { href: "#portfolio", label: t.nav.portfolio },
+  { href: "#contacto", label: t.nav.contact },
 ];
 
 const Navbar = () => {
-  // Tu estado actual para el menú móvil (se mantiene igual)
+  const { language, toggleLanguage } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("#home");
+  const observer = useRef(null);
   
-  // PASO 3: Añadimos el estado y la lógica para el resaltado por scroll
-  const [activeLink, setActiveLink] = useState("#home"); // Estado para el enlace activo
-  const observer = useRef(null); // Usamos useRef para mantener la instancia del observer
+  const t = getTranslation(language);
 
   useEffect(() => {
     // Creamos una instancia del Intersection Observer
@@ -89,24 +91,47 @@ const Navbar = () => {
         {/* Navigation Links */}
         <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full lg:flex lg:items-center lg:w-auto`}>
           <div className="text-md lg:flex-grow flex flex-col lg:flex-row lg:justify-center items-center lg:items-center mt-4 lg:mt-0">
-            
-            {/* PASO 4: Renderizamos los enlaces dinámicamente */}
-            {navLinks.map((link) => (
+            {getNavLinks(t).map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                onClick={handleLinkClick} // PASO 5: Cerramos el menú al hacer clic
-                // Aplicamos clases condicionalmente para el resaltado
+                onClick={handleLinkClick}
                 className={`block w-full text-center py-2 lg:inline-block lg:w-auto mx-4 text-lg font-medium transition duration-300
                   ${activeLink === link.href 
-                    ? 'text-orange-600' // Tu clase para el estado activo
-                    : 'text-[#323946] hover:text-[#ff232a]' // Tus clases para el estado normal
+                    ? 'text-orange-600'
+                    : 'text-[#323946] hover:text-[#ff232a]'
                   }`
                 }
               >
                 {link.label}
               </Link>
             ))}
+            
+            {/* Language Switcher */}
+            <div className="flex items-center gap-1 px-2 py-1 bg-gray-100 rounded-lg">
+              <FaGlobe className="text-gray-600 text-sm mx-1" />
+              <button
+                onClick={() => language !== 'es' && toggleLanguage()}
+                className={`px-2 py-1 rounded ${
+                  language === 'es'
+                    ? 'bg-orange-600 text-white font-medium'
+                    : 'text-gray-600 hover:bg-gray-200'
+                } transition-colors duration-300`}
+              >
+                ES
+              </button>
+              <span className="text-gray-300">|</span>
+              <button
+                onClick={() => language !== 'en' && toggleLanguage()}
+                className={`px-2 py-1 rounded ${
+                  language === 'en'
+                    ? 'bg-orange-600 text-white font-medium'
+                    : 'text-gray-600 hover:bg-gray-200'
+                } transition-colors duration-300`}
+              >
+                EN
+              </button>
+            </div>
           </div>
         </div>
       </div>

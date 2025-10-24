@@ -2,12 +2,14 @@
 
 import React from 'react';
 import { motion } from "framer-motion";
-// PASO 1: Importamos los íconos que vamos a usar
+import { useLanguage } from '../context/LanguageContext';
+import { getTranslation } from '../translations';
 import { FaGraduationCap, FaArrowRight } from 'react-icons/fa';
 
 const StudiesSection = () => {
-  // Datos de tus estudios
-  const studies = [
+  const { language } = useLanguage();
+  const t = getTranslation(language);
+  const esStudies = [
     {
       title: "Experto Universitario en Seguridad de la Información",
       institution: "Centro de e-Learning UTN FRBA",
@@ -15,15 +17,33 @@ const StudiesSection = () => {
       description: "Desarrollo de planes estratégicos de seguridad, con foco en los elementos tecnológicos, redes y servidores de datos que generan un impacto de valor en la organización.",
       skills: ["Ciberseguridad", "Gestión de Riesgos", "Normativas", "Redes Seguras"]
     },
-     {
+    {
       title: "Diplomatura en Programación Web Full Stack con React JS",
       institution: "Centro de e-Learning UTN FRBA",
       date: "Noviembre 2022 - Mayo 2023",
       description: "Formación dedicada al Front End y luego los contenidos aplicados a desarrollos Full Stack manejando desde el maquetado inicial hasta la puesta en marcha de un proyecto completo.",
       skills: ["HTML", "CSS", "React", "Node.js", "JavaScript ES6+"]
-    },
-    // ... resto de tus estudios
+    }
   ];
+
+  const enStudies = [
+    {
+      title: "University Expert in Information Security",
+      institution: "UTN FRBA e-Learning Center",
+      date: "March 2024 - August 2024",
+      description: "Development of strategic security plans, focusing on technological elements, networks, and data servers that generate value impact in the organization.",
+      skills: ["Cybersecurity", "Risk Management", "Regulations", "Secure Networks"]
+    },
+    {
+      title: "Full Stack Web Programming Diploma with React JS",
+      institution: "UTN FRBA e-Learning Center",
+      date: "November 2022 - May 2023",
+      description: "Training dedicated to Front End and then the content applied to Full Stack developments, handling from initial layout to the implementation of a complete project.",
+      skills: ["HTML", "CSS", "React", "Node.js", "JavaScript ES6+"]
+    }
+  ];
+
+  const studies = language === 'es' ? esStudies : enStudies;
 
   // PASO 2: Añadimos tu URL de LinkedIn
   const linkedinUrl = "https://www.linkedin.com/in/david-monte-a9ba567b/";
@@ -39,7 +59,7 @@ const StudiesSection = () => {
     >
       <div className="container mx-auto px-4 max-w-4xl">
         <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-800 text-center mb-16">
-          Mi <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">Formación</span>
+          {t.studies.title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600">{t.studies.titleHighlight}</span>
         </h2>
 
         {/* Contenedor de la línea de tiempo (sin cambios) */}
@@ -82,7 +102,7 @@ const StudiesSection = () => {
             // La clase 'group' es la clave para la animación del ícono
             className="group inline-flex items-center text-lg font-semibold text-slate-700 transition-colors duration-300 hover:text-orange-600"
           >
-            Ver trayectoria completa en LinkedIn
+            {t.studies.viewMore}
             <FaArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-2" />
           </a>
         </div>
