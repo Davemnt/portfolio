@@ -31,14 +31,14 @@ const StudiesSection = () => {
       title: "University Expert in Information Security",
       institution: "UTN FRBA e-Learning Center",
       date: "March 2024 - August 2024",
-      description: "Development of strategic security plans, focusing on technological elements, networks, and data servers that generate value impact in the organization.",
+      description: "Development of strategic security plans, focusing on the technological elements, networks, and data servers that generate value impact within the organization.",
       skills: ["Cybersecurity", "Risk Management", "Regulations", "Secure Networks"]
     },
     {
       title: "Full Stack Web Programming Diploma with React JS",
       institution: "UTN FRBA e-Learning Center",
       date: "November 2022 - May 2023",
-      description: "Training dedicated to Front End and then the content applied to Full Stack developments, handling from initial layout to the implementation of a complete project.",
+      description: "Training focused on Front-End development, followed by the application of content to Full-Stack projects, covering everything from initial layout design to the deployment of a complete project.",
       skills: ["HTML", "CSS", "React", "Node.js", "JavaScript ES6+"]
     }
   ];

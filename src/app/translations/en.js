@@ -15,10 +15,10 @@ export const en = {
     linkedIn: "VIEW LINKEDIN PROFILE"
   },
   about: {
-    title: "About",
-    titleHighlight: "me",
-    description1: "With 14 years of experience as an IT technician, I've dedicated my career to providing support and delivering effective solutions with quality service. Driven by a constant desire for growth, I've expanded my skills into the exciting world of web development.",
-    description2: "Currently, I'm looking to join a dynamic company where I can contribute my knowledge, continue learning, and actively contribute to team success, with the intention of establishing a solid, long-term working relationship.",
+    title: "A little",
+    titleHighlight: "about me",
+    description1: "With 14 years of experience as an IT Technician, I have dedicated my career to providing support and offering effective solutions with high-quality service. Driven by a constant desire for growth, I have expanded my skills into the exciting world of web development.",
+    description2: "I am currently looking to join a dynamic company where I can contribute my knowledge, continue learning, and actively participate in the team's success, with the intent of establishing a solid, long-term working relationship.",
     techTitle: "Technologies and Tools"
   },
   studies: {
@@ -33,7 +33,7 @@ export const en = {
   contact: {
     title: "Get in",
     titleHighlight: "Touch",
-    subtitle: "I'd love to hear from you! Whether for projects, collaborations, or just to say hello, don't hesitate to send me a message.",
+    subtitle: "Let's talk! I am open to new projects, collaborations, and job opportunities.",
     form: {
       name: "Name",
       email: "Email",

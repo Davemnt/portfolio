@@ -33,7 +33,7 @@ export const es = {
   contact: {
     title: "Ponte en",
     titleHighlight: "Contacto",
-    subtitle: "¡Me encantaría saber de ti! Ya sea para proyectos, colaboraciones o simplemente para saludar, no dudes en enviarme un mensaje.",
+    subtitle: "¡Hablemos! Estoy abierto a nuevos proyectos, colaboraciones y oportunidades laborales.",
     form: {
       name: "Nombre",
       email: "Mail",
