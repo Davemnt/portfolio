@@ -72,7 +72,7 @@ const Navbar = () => {
         {/* Logo Section (sin cambios) */}
         <div className="flex items-center flex-shrink-0 mr-6">
           <img
-            src="/images/dm_logo.png"
+            src="images/logo.png"
             alt="Tu Logo"
             className="h-12 w-auto filter drop-shadow-[1px_1px_7px_rgba(250,61,59,1)]"
           />

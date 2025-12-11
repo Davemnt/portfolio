@@ -46,6 +46,15 @@ const PortfolioSection = () => {
       gitUrl: "#",
       previewUrl: "https://control-stock-demo.web.app/login",
     },
+    {
+      id: 4,
+      title: "Notas Personales - Demo",
+      description: "Es una aplicación web privada y segura diseñada para la gestión personal de notas. La aplicación permite a los usuarios organizar, categorizar y almacenar sus reflexiones de manera estructurada, con funcionalidades avanzadas de búsqueda y sincronización multi-dispositivo.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Firebase"],
+      image: "/images/personal-notes.png",
+      gitUrl: "#",
+      previewUrl: "https://personal-notes-demo.netlify.app/",
+    },
   ];
 
   const enProjects = [
@@ -84,6 +93,15 @@ const PortfolioSection = () => {
       image: "/images/sistema-control-stock.jpeg",
       gitUrl: "#",
       previewUrl: "https://control-stock-demo.web.app/login",
+    },
+    {
+      id: 5,
+      title: "Personal Notes - Demo",
+      description: "It is a private and secure web application designed for personal note management. The application allows users to organize, categorize, and store their thoughts in a structured way, with advanced search features and multi-device synchronization.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Firebase"],
+      image: "/images/personal-notes.png",
+      gitUrl: "#",
+      previewUrl: "https://personal-notes-demo.netlify.app/",
     },
   ];
 
