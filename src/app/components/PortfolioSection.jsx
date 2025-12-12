@@ -47,7 +47,7 @@ const PortfolioSection = () => {
       previewUrl: "https://control-stock-demo.web.app/login",
     },
     {
-      id: 4,
+      id: 5,
       title: "Notas Personales - Demo",
       description: "Es una aplicación web privada y segura diseñada para la gestión personal de notas. La aplicación permite a los usuarios organizar, categorizar y almacenar sus reflexiones de manera estructurada, con funcionalidades avanzadas de búsqueda y sincronización multi-dispositivo.",
       technologies: ["HTML5", "CSS3", "JavaScript", "Firebase"],
