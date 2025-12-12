@@ -28,14 +28,14 @@ const PortfolioSection = () => {
       gitUrl: "#",
       previewUrl: "https://gestor-de-gastos-demo.web.app/",
     },
-    {
+   {
       id: 3,
-      title: "Landing Page para Negocio de IT",
-      description: "Es un sitio web corporativo moderno y completamente responsive, diseñado para ofrecer servicios de tecnología profesionales. El proyecto combina diseño atractivo, funcionalidad robusta y optimización SEO avanzada.",
-      technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "TailwindCSS"],
-      image: "/images/miventech.png",
+      title: "Notas Personales - Demo",
+      description: "Es una aplicación web privada y segura diseñada para la gestión personal de notas. La aplicación permite a los usuarios organizar, categorizar y almacenar sus reflexiones de manera estructurada, con funcionalidades avanzadas de búsqueda y sincronización multi-dispositivo.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Firebase"],
+      image: "/images/personal-notes.png",
       gitUrl: "#",
-      previewUrl: "https://miventech.com/",
+      previewUrl: "https://personal-notes-demo.netlify.app/",
     },
     {
       id: 4,
@@ -46,15 +46,16 @@ const PortfolioSection = () => {
       gitUrl: "#",
       previewUrl: "https://control-stock-demo.web.app/login",
     },
-    {
+   {
       id: 5,
-      title: "Notas Personales - Demo",
-      description: "Es una aplicación web privada y segura diseñada para la gestión personal de notas. La aplicación permite a los usuarios organizar, categorizar y almacenar sus reflexiones de manera estructurada, con funcionalidades avanzadas de búsqueda y sincronización multi-dispositivo.",
-      technologies: ["HTML5", "CSS3", "JavaScript", "Firebase"],
-      image: "/images/personal-notes.png",
+      title: "Landing Page para Negocio de IT",
+      description: "Es un sitio web corporativo moderno y completamente responsive, diseñado para ofrecer servicios de tecnología profesionales. El proyecto combina diseño atractivo, funcionalidad robusta y optimización SEO avanzada.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "TailwindCSS"],
+      image: "/images/miventech.png",
       gitUrl: "#",
-      previewUrl: "https://personal-notes-demo.netlify.app/",
+      previewUrl: "https://miventech.com/",
     },
+  
   ];
 
   const enProjects = [
@@ -76,14 +77,14 @@ const PortfolioSection = () => {
       gitUrl: "#",
       previewUrl: "https://gestor-de-gastos-demo.web.app/",
     },
-    {
+   {
       id: 3,
-      title: "IT Business Landing Page",
-      description: "A modern and fully responsive corporate website, designed to showcase professional technology services. The project combines attractive design, robust functionality, and advanced SEO optimization.",
-      technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "TailwindCSS"],
-      image: "/images/miventech.png",
+      title: "Personal Notes - Demo",
+      description: "It is a private and secure web application designed for personal note management. The application allows users to organize, categorize, and store their thoughts in a structured way, with advanced search features and multi-device synchronization.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Firebase"],
+      image: "/images/personal-notes.png",
       gitUrl: "#",
-      previewUrl: "https://miventech.com/",
+      previewUrl: "https://personal-notes-demo.netlify.app/",
     },
     {
       id: 4,
@@ -94,15 +95,16 @@ const PortfolioSection = () => {
       gitUrl: "#",
       previewUrl: "https://control-stock-demo.web.app/login",
     },
-    {
+      {
       id: 5,
-      title: "Personal Notes - Demo",
-      description: "It is a private and secure web application designed for personal note management. The application allows users to organize, categorize, and store their thoughts in a structured way, with advanced search features and multi-device synchronization.",
-      technologies: ["HTML5", "CSS3", "JavaScript", "Firebase"],
-      image: "/images/personal-notes.png",
+      title: "IT Business Landing Page",
+      description: "A modern and fully responsive corporate website, designed to showcase professional technology services. The project combines attractive design, robust functionality, and advanced SEO optimization.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "TailwindCSS"],
+      image: "/images/miventech.png",
       gitUrl: "#",
-      previewUrl: "https://personal-notes-demo.netlify.app/",
+      previewUrl: "https://miventech.com/",
     },
+ 
   ];
 
   const projects = language === 'es' ? esProjects : enProjects;
