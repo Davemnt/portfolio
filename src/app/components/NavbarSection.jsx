@@ -74,7 +74,7 @@ const Navbar = () => {
           <img
             src="images/logo.png"
             alt="Tu Logo"
-            className="h-10 w-auto filter drop-shadow-[1px_1px_7px_rgba(250,61,59,1)]"
+            className="h-19 w-auto filter drop-shadow-[1px_1px_7px_rgba(250,61,59,1)]"
           />
         </div>
 
